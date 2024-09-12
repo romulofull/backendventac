@@ -26,6 +26,11 @@ const contactoSchema = new mongoose.Schema({
 
 const Contacto = mongoose.model('Contacto', contactoSchema);
 
+// Ruta GET para "Hola Mundo"
+app.get('/', (req, res) => {
+  res.send('Hola Mundo');
+});
+
 // Ruta POST para enviar contacto
 app.post('/enviar', async (req, res) => {
   try {
